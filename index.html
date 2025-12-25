@@ -39,7 +39,7 @@
       </div>
       <!-- .title_box end-->
       <nav>
-        <ul class="header-nav">
+        <ul class="header-nav" role="list">
           <li class="header-nav-list">
             <a href="" class="link">パック教材</a>
             <!-- .link end-->
@@ -66,24 +66,33 @@
       </nav>
     </header>
     <main>
-      <section class="kv bd-green"><img src="" alt="TOP画像" class="kv-img" /></section>
+      <section class="kv bd-green has-seal">
+        <img src="" alt="TOP画像" class="kv-img" />
+        <img src="img/front-page/ABC.png" alt="英語イメージ" class="seal seal--kv" />
+      </section>
       <!-- .kv end-->
       <section class="pickup-product">
-        <a href="" class="link bd-green"><img src="" alt="" class="pickup-img" /></a>
-        <!-- .link bd-green end-->
-        <a href="" class="link bd-green"><img src="" alt="" class="pickup-img" /></a>
-        <!-- .link bd-green end-->
-        <a href="" class="link bd-green"><img src="" alt="" class="pickup-img" /></a>
-        <!-- .link bd-green end-->
+        <div class="pickup-cards">
+          <a href="" class="link bd-green"><img src="" alt="" class="pickup-img" /></a>
+          <!-- .link bd-green end-->
+          <a href="" class="link bd-green"><img src="" alt="" class="pickup-img" /></a>
+          <!-- .link bd-green end-->
+          <a href="" class="link bd-green"><img src="" alt="" class="pickup-img" /></a>
+          <!-- .link bd-green end-->
+        </div>
+        <!-- .pickup-cards end-->
+        <img src="img/front-page/frasco.png" alt="" class="seal seal--pickup--top" />
+        <img src="img/front-page/protractor.png" alt="" class="seal seal--pickup--buttom1" />
+        <img src="img/front-page/triangle.png" alt="" class="seal seal--pickup--buttom2" />
       </section>
       <!-- .pickup-product end-->
       <section class="product-list bg-yellow">
-        <section class="school-prep">
+        <section class="school-prep has-seal">
           <div class="title-box">
             <h2 class="title-box-main">小学校受験対策教材</h2>
           </div>
           <!-- .title-box end-->
-          <ul class="material-tags">
+          <ul class="material-tags" role="list">
             <li class="tag-item">
               <a href="" class="link icon">
                 <p class="tag-name">パック教材</p>
@@ -105,7 +114,7 @@
             </li>
             <!-- .tag-item end-->
           </ul>
-          <ul class="material-tags disabled">
+          <ul class="material-tags disabled" role="list">
             <li class="tag-item">
               <a href="" class="link icon">
                 <p class="tag-name">学校別</p>
@@ -118,6 +127,7 @@
             <!-- .tag-item end-->
           </ul>
           <!-- .material-tags end-->
+          <img src="img/front-page/school.png" alt="" class="seal seal--prep" />
         </section>
         <!-- .school-prep end-->
         <section class="school-basic">
@@ -125,7 +135,7 @@
             <h2 class="title-box-main">小学校基礎学習教材</h2>
           </div>
           <!-- .title-box end-->
-          <ul class="material-tags">
+          <ul class="material-tags" role="list">
             <li class="tag-item disabled">
               <a href="" class="link icon">
                 <p class="tag-name">単元別</p>
@@ -143,13 +153,13 @@
       </section>
       <!-- .product-list end-->
       <aside class="sidemenu">
-        <section class="site-navigation bg-green radius">
+        <section class="site-navigation bg-green radius has-seal">
           <div class="title-box">
             <h2 class="section-title">ナビゲーション</h2>
             <!-- .section-title end-->
           </div>
           <!-- .title-box end-->
-          <ul class="site-navigation-list">
+          <ul class="site-navigation-list" role="list">
             <li class="list-item">
               <a href="" class="link">ご利用ガイド</a>
               <!-- .link end-->
@@ -167,6 +177,7 @@
             <!-- .list-item end-->
           </ul>
           <!-- .site-navigation-list end-->
+          <img src="img/front-page/pancil&erase.png" alt="" class="seal seal--site-nav" />
         </section>
         <!-- .site-navigation bg-green radius end-->
         <section class="site-navigation bg-green radius">
@@ -175,7 +186,7 @@
             <!-- .section-title end-->
           </div>
           <!-- .title-box end-->
-          <ul class="site-navigation-list">
+          <ul class="site-navigation-list" role="list">
             <li class="list-item">
               <a href="" class="link">年中向け</a>
               <!-- .link end-->
@@ -200,13 +211,13 @@
           <!-- .site-navigation-list end-->
         </section>
         <!-- .site-navigation bg-green radius end-->
-        <section class="site-navigation bg-green radius">
+        <section class="site-navigation bg-green radius has-seal">
           <div class="title-box">
             <h2 class="section-title">SNS紹介</h2>
             <!-- .section-title end-->
           </div>
           <!-- .title-box end-->
-          <ul class="site-navigation-list">
+          <ul class="site-navigation-list" role="list">
             <li class="list-item x">
               <a href="" class="link">TERRACE LAB.COM</a>
               <!-- .link end-->
@@ -224,6 +235,8 @@
             <!-- .list-item end-->
           </ul>
           <!-- .site-navigation-list end-->
+          <img src="img/front-page/note.png" alt="" class="seal seal--sns1" />
+          <img src="img/front-page/pencil.png" alt="" class="seal seal--sns2" />
         </section>
         <!-- .site-navigation bg-green radius end-->
       </aside>
@@ -232,7 +245,7 @@
     <footer>
       <img src="img/logo.png" alt="" class="footer-logo" />
       <nav>
-        <ul class="footer-nav">
+        <ul class="footer-nav" role="list">
           <li class="footer-nav-item">
             <a href="" class="link">FAQ</a>
             <!-- .link end-->

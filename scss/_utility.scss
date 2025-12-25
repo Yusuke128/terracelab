@@ -36,3 +36,11 @@
     @extend %border-base;
   }
 }
+
+.has-seal {
+  position: relative;
+}
+
+.seal {
+  position: absolute;
+}
