@@ -1,9 +1,10 @@
 $(".pickup-slider").slick({
-  autoplay: false,
+  autoplay: true,
   dots: false,
   arrows: true,
+  slideToShow: 3,
   centerMode: true,
-
+  centerPadding: "25%",
   prevArrow:
     '<button class="slick-prev pickup-arrow" aria-label="Previous"><span class="material-symbols-outlined">keyboard_arrow_left</span></button>',
   nextArrow:
@@ -11,7 +12,7 @@ $(".pickup-slider").slick({
   responsive: [
     {
       breakpoint: 768,
-      settings: { slideToShow: 1 }
+      settings: { slideToShow: 1, centerMode: false }
     }
   ]
 });

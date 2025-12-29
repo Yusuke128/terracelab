@@ -61,11 +61,6 @@
   &-slider {
     .slick {
       &-list {
-        overflow: visible;
-
-        @include v.media(mobile) {
-          overflow: hidden;
-        }
       }
 
       &-arrow {
