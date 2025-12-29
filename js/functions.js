@@ -3,18 +3,15 @@ $(".pickup-slider").slick({
   dots: false,
   arrows: true,
   centerMode: true,
-  variableWidth: true,
-  infinite: true,
+
   prevArrow:
     '<button class="slick-prev pickup-arrow" aria-label="Previous"><span class="material-symbols-outlined">keyboard_arrow_left</span></button>',
   nextArrow:
     '<button class="slick-next pickup-arrow" aria-label="next"><span class="material-symbols-outlined">keyboard_arrow_right</span></button>',
   responsive: [
     {
-      breakpoint: 796,
-      settings: {
-        slidesToShow: 1
-      }
+      breakpoint: 768,
+      settings: { slideToShow: 1 }
     }
   ]
 });

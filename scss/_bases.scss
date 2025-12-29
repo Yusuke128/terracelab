@@ -55,6 +55,7 @@ main {
   margin: 0 auto;
 
   @include v.media(mobile) {
+    width: 100%;
     padding: 1rem 0;
   }
 
@@ -67,6 +68,8 @@ main {
 
     @include v.media(mobile) {
       grid-template-columns: 100%;
+      gap: 5rem;
+      padding: 1rem;
     }
   }
 }

@@ -8,16 +8,36 @@ footer {
 }
 
 .footer {
+  @include v.media(mobile) {
+    padding: 1rem;
+
+    &-logo {
+      grid-row-start: 2;
+      margin: 0 auto;
+    }
+  }
+
   &-nav {
     gap: 4.5rem;
 
     @include v.flex(space-evenly, center);
+
+    @include v.media(mobile) {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
   }
 
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+
+    @include v.media(mobile) {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: 1fr;
+    }
   }
 
   .copyright {
