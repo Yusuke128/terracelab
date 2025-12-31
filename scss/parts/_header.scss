@@ -16,11 +16,9 @@ header {
   border-bottom: solid 15px var(--green);
 
   @include v.media(mobile) {
-    .header {
-      .logo {
-        width: 60%;
-        margin: 0 auto;
-      }
+    .logo {
+      width: 60%;
+      margin: 0 auto;
     }
   }
 
@@ -91,7 +89,7 @@ header {
           transition-delay: 1s;
         }
 
-        .header-nav-list:last-child {
+        .header-nav-list {
           &:last-child {
             display: none;
           }
@@ -102,7 +100,7 @@ header {
     .link {
       padding: 1rem 1.5rem;
       white-space: nowrap;
-
+      gap: 1rem;
       @include v.flex(center, center);
 
       @include v.media(mobile) {
@@ -111,6 +109,7 @@ header {
     }
 
     &-sp {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       align-self: center;

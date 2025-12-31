@@ -4,41 +4,23 @@
 .no-scroll {
   overflow: hidden;
 }
-
 .bg {
   &-green {
-    padding: 3rem 2rem;
     background-color: var(--green);
   }
 
   &-yellow {
-    padding: 3rem 5rem;
     background-color: var(--yellow);
-
-    @include v.media(mobile) {
-      padding: 1rem;
-    }
   }
 
   &-white {
-    padding: 3rem 5rem;
     background-color: var(--white);
-
-    @include v.media(mobile) {
-      padding: 1rem;
-    }
   }
 
   &-gray {
-    padding: 3rem 5rem;
     background-color: var(--gray);
-
-    @include v.media(mobile) {
-      padding: 1rem;
-    }
   }
 }
-
 .bd {
   &-green {
     border-color: var(--green);
@@ -52,16 +34,20 @@
     @extend %border-base;
   }
 }
-
+.section-padding {
+  padding: 3rem 2rem;
+  @include v.media(mobile) {
+    padding: 1rem;
+  }
+}
 .has-seal {
   position: relative;
 }
-
 .seal {
   position: absolute;
   transform-origin: 50% 10%;
   animation: seal-bell 10s ease-in-out infinite;
-
+  z-index: 1;
   @include v.media(mobile) {
     max-width: 79px;
   }

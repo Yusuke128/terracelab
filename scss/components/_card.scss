@@ -5,7 +5,13 @@
   grid-template-rows: 1fr;
   gap: 1rem;
   align-items: center;
-
+  color: var(--black); //カードがaタグだった場合の処理
+  @at-root a#{&} {
+    &:visited,
+    &:active {
+      color: var(--black); //カードがaタグだった場合の処理
+    }
+  }
   &-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
@@ -19,14 +25,14 @@
   }
 
   &-imgbox {
-    align-items: center;
+    display: grid;
+    place-items: center;
     width: 100%;
     aspect-ratio: 1;
     overflow: hidden;
   }
 
   &-img {
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -41,14 +47,12 @@
     @extend %list-disc;
   }
 
-  // カードがリンクだった場合の設定
-  &-link,
-  a {
-    color: var(--dark-color);
+  &-link {
+    color: var(--black);
 
-    :visited,
-    :active {
-      color: var(--dark-color);
+    &:visited,
+    &:active {
+      color: var(--black);
     }
   }
 }

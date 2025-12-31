@@ -12,7 +12,10 @@ $(".pickup-slider").slick({
   responsive: [
     {
       breakpoint: 768,
-      settings: { slideToShow: 1, centerMode: false }
+      settings: {
+        slideToShow: 1,
+        centerMode: false
+      }
     }
   ]
 });

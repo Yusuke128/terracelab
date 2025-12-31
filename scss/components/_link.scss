@@ -3,13 +3,9 @@
 .link {
   position: relative;
   display: inline-block;
-  gap: 1.2rem;
-  align-items: center;
   width: 100%;
   color: var(--black);
   text-decoration: none;
-
-  @extend %radius;
 
   .bg-green & {
     color: var(--white);
@@ -29,7 +25,7 @@
       position: absolute;
       top: -1.5rem;
       left: 1rem;
-      content: "Comming Soon...";
+      content: "Coming Soon...";
     }
   }
 

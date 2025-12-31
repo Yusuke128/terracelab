@@ -2,11 +2,11 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover" />
     <title>Yuitomon&nbsp;HTML&nbsp;Page</title>
 
     <!-- SEO -->
-    <meta name="title-box-sub-title" content="ページの概要を記述します" />
+    <meta name="description" content="ページの概要を記述します" />
     <link rel="canonical" href="https://example.com/page-url" />
 
     <!-- General -->
@@ -24,7 +24,8 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
 
@@ -71,17 +72,17 @@
         <nav class="nav-pc">
           <ul class="header-nav header-nav-pc" role="list">
             <li class="header-nav-list">
-              <a href="" class="link bg-yellow icon">パック教材</a>
+              <a href="" class="link radius bg-yellow icon">パック教材</a>
               <!-- .link end-->
             </li>
             <!-- .header-nav-list end-->
             <li class="header-nav-list">
-              <a href="" class="link bg-yellow icon">単元別</a>
+              <a href="" class="link radius bg-yellow icon">単元別</a>
               <!-- .link end-->
             </li>
             <!-- .header-nav-list end-->
-            <li class="header-nav-list disabled">
-              <a href="" class="link icon" aria-disabled="true">学校別</a>
+            <li class="header-nav-list disabled" data-label="coming soon...">
+              <a href="" class="link radius icon" aria-disabled="true">学校別</a>
               <!-- .link end-->
             </li>
             <!-- .header-nav-list end-->
@@ -100,20 +101,34 @@
       <section class="kv bd-green has-seal">
         <img src="img/front-page/image_sample.png" alt="TOP画像" class="kv-img" />
         <img src="img/front-page/ABC.png" alt="英語イメージ" class="seal seal--kv" />
+        <article class="kv-textarea">
+          <div class="kv-content">
+            <h1 class="kv-title">Terrace Lab</h1>
+            <!-- .kv-title end-->
+            <p class="kv-text">Terrace Labでは小学受験対策に注力しています</p>
+            <!-- .kv-text end-->
+          </div>
+          <!-- .kv-content end-->
+          <a href="" class="link kv-link button"></a>
+          <!-- .link kv-link end-->
+        </article>
+        <!-- .kv-textarea end-->
       </section>
       <!-- .kv end-->
+
+      <!-- 新着・お知らせ -->
       <section class="pickup-product has-seal">
-        <div class="pickup-cards pickup-slider">
+        <div class="card-list pickup-cards pickup-slider">
           <!-- .prebiew end-->
-          <a href="" class="link card bd-green">
+          <a href="" class="link card pickup-card bd-green radius">
             <img src="img/front-page/image_sample.png" alt="" class="pickup-img" />
           </a>
           <!-- .link bd-green end-->
-          <a href="" class="link card bd-green">
+          <a href="" class="link card pickup-card bd-green radius">
             <img src="img/front-page/image_sample.png" alt="" class="pickup-img" />
           </a>
           <!-- .link bd-green end-->
-          <a href="" class="link card bd-green">
+          <a href="" class="link card pickup-card bd-green radius">
             <img src="img/front-page/image_sample.png" alt="" class="pickup-img" />
           </a>
           <!-- .link bd-green end-->
@@ -127,16 +142,190 @@
       </section>
       <!-- .pickup-product end-->
 
-      <div class="container">
+      <!-- お悩み喚起 -->
+      <section class="problems container">
+        <div class="title-box">
+          <p class="title-box-sub-title">Problems</p>
+          <!-- .title-box-sub-title end-->
+          <h2 class="title-box-main">こんなお悩みありませんか？</h2>
+          <!-- .title-box-main end-->
+        </div>
+        <!-- .title-box end-->
+
+        <ul class="card-list problem-list" role="list">
+          <li class="card problem-card">
+            <div class="card-imgbox"><img src="" alt="" class="card-img" /></div>
+            <!-- .card-imgbox end-->
+            <h3 class="card-title">受験を視野に入れて良いか迷ってる</h3>
+            <!-- .card-title end-->
+            <div class="card-content">
+              <p>お子様の学力がわからず不安</p>
+              <p>受験させるべきか迷っている</p>
+            </div>
+            <!-- .card-content end-->
+          </li>
+          <!-- .card problem-card end-->
+          <li class="card problem-card">
+            <div class="card-imgbox"><img src="" alt="" class="card-img" /></div>
+            <!-- .card-imgbox end-->
+            <h3 class="card-title">成長している実感がない</h3>
+            <!-- .card-title end-->
+            <div class="card-content">
+              <p>家庭教師、お教室に通わせているが</p>
+              <p>成長している実感がない</p>
+            </div>
+            <!-- .card-content end-->
+          </li>
+          <!-- .card problem-card end-->
+          <li class="card problem-card">
+            <div class="card-imgbox"><img src="" alt="" class="card-img" /></div>
+            <!-- .card-imgbox end-->
+            <h3 class="card-title">評価が合っているかわからない</h3>
+            <!-- .card-title end-->
+            <div class="card-content">
+              <p>通っている教室・先生の判断で評価されるので</p>
+              <p>正しい評価なのか不安</p>
+            </div>
+            <!-- .card-content end-->
+          </li>
+          <!-- .card problem-card end-->
+          <li class="card problem-card">
+            <div class="card-imgbox"><img src="" alt="" class="card-img" /></div>
+            <!-- .card-imgbox end-->
+            <h3 class="card-title">模試が気軽に受けれない</h3>
+            <!-- .card-title end-->
+            <div class="card-content">
+              <p>模試の時期が決まっている</p>
+              <p>結果が出るまで時間がかかる</p>
+            </div>
+            <!-- .card-content end-->
+          </li>
+          <!-- .card problem-card end-->
+        </ul>
+        <!-- .card-list.problem-list end-->
+      </section>
+      <!-- .problems container end-->
+
+      <!-- 202521229追加要素 -->
+      <!-- テラスラボでできること -->
+      <section class="features container">
+        <div class="title-box">
+          <h2 class="title-box-main">TERRACE&nbsp;LABの特徴</h2>
+          <!-- .title-box-main end-->
+          <p class="title-box-sub-title">テキストが入ります</p>
+          <!-- .title-box-sub-title end-->
+        </div>
+        <!-- .title-box end-->
+        <ol class="feature-list">
+          <li class="feature-list-item list-item">一般的な教室の模試よりも安く、結果も早く確認できる</li>
+          <!-- .feature-list-item list-item end-->
+          <li class="feature-list-item list-item">AI分析で、今の実力を客観的に見える化</li>
+          <!-- .feature-list-item list-item end-->
+          <li class="feature-list-item list-item">成長と課題を納得できる形でフィードバック</li>
+          <!-- .feature-list-item list-item end-->
+          <li class="feature-list-item list-item">体験者の視点を加え、わかりやすく説明</li>
+          <!-- .feature-list-item list-item end-->
+          <li class="feature-list-item list-item">AIと体験者の知見をもとに次のステップを提案</li>
+          <!-- .feature-list-item list-item end-->
+        </ol>
+        <!-- .feature-list end-->
+      </section>
+      <!-- .features container end-->
+
+      <!-- 使い方 -->
+      <section class="howto container">
+        <div class="title-box">
+          <h2 class="title-box-main">使い方は簡単3ステップ</h2>
+          <!-- .title-box-main end-->
+          <p class="title-box-sub-title">テキストが入ります</p>
+          <!-- .title-box-sub-title end-->
+        </div>
+        <!-- .title-box end-->
+        <ol class="card-list howto-list">
+          <li class="card howto-card">
+            <div class="card-imgbox"><img src="" alt="" /></div>
+            <!-- .card-imgbox end-->
+            <div class="card-content">
+              <h3 class="card-title"></h3>
+              <!-- .card-title end-->
+              <p>テキストが入ります</p>
+              <a href="" class="link radius">詳しく見る</a>
+              <!-- .link end-->
+            </div>
+            <!-- .card-content end-->
+          </li>
+          <!-- .card end-->
+          <li class="card howto-card">
+            <div class="card-imgbox"><img src="" alt="" /></div>
+            <!-- .card-imgbox end-->
+            <div class="card-content">
+              <h3 class="card-title"></h3>
+              <!-- .card-title end-->
+              <p>テキストが入ります</p>
+              <a href="" class="link radius">詳しく見る</a>
+              <!-- .link end-->
+            </div>
+            <!-- .card-content end-->
+          </li>
+          <!-- .card end-->
+          <li class="card howto-card">
+            <div class="card-imgbox"><img src="" alt="" /></div>
+            <!-- .card-imgbox end-->
+            <div class="card-content">
+              <h3 class="card-title"></h3>
+              <!-- .card-title end-->
+              <p>テキストが入ります</p>
+              <a href="" class="link radius">詳しく見る</a>
+              <!-- .link end-->
+            </div>
+            <!-- .card-content end-->
+          </li>
+          <!-- .card end-->
+        </ol>
+        <!-- .card-list end-->
+      </section>
+      <!-- .howto container end-->
+      <!-- 教材紹介
+       product-list使い回し? -->
+
+      <!-- 運営・監修者 -->
+      <article class="adminvoice container">
+        <div class="adminvoice-left"><img src="" alt="" class="adminvoice-img" /></div>
+        <!-- .adminvoice-left end-->
+        <div class="adminvoice-right">
+          <div class="title-box">
+            <h2 class="title-box-main">監修者メッセージ</h2>
+            <!-- .title-box-main end-->
+          </div>
+          <!-- .title-box end-->
+          <div class="adminvoice-messege">
+            <p>テキストが入ります</p>
+            <p>テキストが入ります</p>
+            <p>テキストが入ります</p>
+          </div>
+          <!-- .adminvoice-messege end-->
+          <div class="adminvoice-post">
+            <p class="adminvoice-postname">〇〇株式会社&nbsp;代表取締役</p>
+            <!-- .adminvoice-postname end-->
+            <p class="adminvoice-name">山田&nbsp;太郎</p>
+            <!-- .adminvoice-name end-->
+          </div>
+          <!-- .adminvoice-post end-->
+        </div>
+        <!-- .adminvoice-right end-->
+      </article>
+      <!-- .adminvoice conteiner end-->
+
+      <div class="container main-layout">
         <section class="product-list radius">
-          <section class="school-prep bg-yellow radius has-seal">
+          <section class="school-prep bg-yellow section-padding radius has-seal">
             <div class="title-box">
               <h2 class="title-box-main">小学校受験対策教材</h2>
             </div>
             <!-- .title-box end-->
             <ul class="material-tags" role="list">
               <li class="tag-item">
-                <a href="" class="link icon">
+                <a href="" class="link radius icon">
                   <p class="tag-name">パック教材</p>
                   <!-- .tag-name end-->
                   <p class="tag-content">学年別や目標別にまとめられたお得なパック教材です。</p>
@@ -146,7 +335,7 @@
               </li>
               <!-- .tag-item end-->
               <li class="tag-item">
-                <a href="" class="link icon">
+                <a href="" class="link radius icon">
                   <p class="tag-name">単元別</p>
                   <!-- .tag-name end-->
                   <p class="tag-content">苦手な分野を克服したい方におすすめ、単元別教材です。</p>
@@ -155,8 +344,8 @@
                 <!-- .link end-->
               </li>
               <!-- .tag-item end-->
-              <li class="tag-item disabled">
-                <a href="" class="link icon" aria-disabled="true">
+              <li class="tag-item disabled" data-label="coming soon...">
+                <a href="" class="link radius icon" aria-disabled="true">
                   <p class="tag-name">学校別</p>
                   <!-- .tag-name end-->
                   <p class="tag-content">特定の小学校対策に特化した教材は近日公開予定です。</p>
@@ -170,14 +359,14 @@
             <img src="img/front-page/school.png" alt="" class="seal seal--prep" />
           </section>
           <!-- .school-prep end-->
-          <section class="school-basic bg-yellow radius">
+          <section class="school-basic section-padding bg-yellow radius">
             <div class="title-box">
               <h2 class="title-box-main">小学校基礎学習教材</h2>
             </div>
             <!-- .title-box end-->
             <ul class="material-tags" role="list">
-              <li class="tag-item disabled">
-                <a href="" class="link icon" aria-disabled="true">
+              <li class="tag-item disabled" data-label="coming soon...">
+                <a href="" class="link radius icon" aria-disabled="true">
                   <p class="tag-name">単元別</p>
                   <!-- .tag-name end-->
                   <p class="tag-content">小学生向けの基礎学習教材は近日公開予定です。</p>
@@ -192,8 +381,9 @@
           <!-- .school-basic end-->
         </section>
         <!-- .product-list end-->
+
         <aside class="sidemenu">
-          <section class="site-navigation bg-green radius has-seal">
+          <section class="site-navigation bg-green section-padding radius has-seal">
             <div class="title-box">
               <h2 class="section-title">ナビゲーション</h2>
               <!-- .section-title end-->
@@ -220,7 +410,7 @@
             <img src="img/front-page/pancil&erase.png" alt="" class="seal seal--site-nav" />
           </section>
           <!-- .site-navigation bg-green radius end-->
-          <section class="site-navigation bg-green radius">
+          <section class="site-navigation bg-green section-padding radius">
             <div class="title-box">
               <h2 class="section-title">カテゴリ</h2>
               <!-- .section-title end-->
@@ -251,7 +441,7 @@
             <!-- .site-navigation-list end-->
           </section>
           <!-- .site-navigation bg-green radius end-->
-          <section class="site-navigation bg-green radius has-seal">
+          <section class="site-navigation bg-green section-padding radius has-seal">
             <div class="title-box">
               <h2 class="section-title">SNS紹介</h2>
               <!-- .section-title end-->
@@ -339,6 +529,8 @@
     <script src="https://kit.fontawesome.com/fc4b29f1b1.js" crossorigin="anonymous" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+
     <script src="js/functions.js" defer></script>
   </body>
 </html>
