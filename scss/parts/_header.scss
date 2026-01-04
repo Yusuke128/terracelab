@@ -13,7 +13,6 @@ header {
   z-index: 11;
   min-height: 0;
   background-color: var(--white);
-  border-bottom: solid 15px var(--green);
 
   @include v.media(mobile) {
     .logo {
@@ -41,7 +40,7 @@ header {
 
   .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
   }
 
@@ -73,7 +72,6 @@ header {
     &-pc {
       gap: 0.5rem;
       text-align: center;
-
       @include v.flex(space-between, baseline);
 
       @include v.media(mobile) {
@@ -87,12 +85,6 @@ header {
         .open & {
           transform: translateX(0);
           transition-delay: 1s;
-        }
-
-        .header-nav-list {
-          &:last-child {
-            display: none;
-          }
         }
       }
     }
@@ -153,4 +145,7 @@ header {
       }
     }
   }
+}
+.nav-pc {
+  grid-column: 3;
 }

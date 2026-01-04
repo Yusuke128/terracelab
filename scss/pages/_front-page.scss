@@ -4,12 +4,7 @@
 @use "../variables" as v;
 
 .kv {
-  height: 515px; // サンプル用
-  background-color: #fff; // サンプル用
-  border-top-width: 0;
-  border-right-width: 0;
-  border-left-width: 0;
-
+  background-color: var(--white);
   @include v.media(mobile) {
     width: 100%;
     height: auto;
@@ -51,33 +46,4 @@
 
     @extend %absolute-center;
   }
-}
-.tag {
-  &-item {
-    position: relative;
-
-    .link {
-      padding: 2.5rem 5rem;
-    }
-
-    &.disabled {
-      margin-top: 2rem;
-    }
-  }
-
-  &-name {
-    margin-bottom: 1rem;
-    font-size: var(--font-lg);
-  }
-
-  &-content {
-    font-weight: 500;
-  }
-}
-
-.school-prep {
-  padding-bottom: 7rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  margin-bottom: 3rem;
 }

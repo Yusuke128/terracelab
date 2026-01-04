@@ -5,22 +5,21 @@
 
 // カラー変数の定義 -
 :root {
-  --green: #{v.$green};
-  --lightgreen: #{v.$lightgreen};
-  --yellow: #{v.$yellow};
+  //基本カラー
+  --navy: #{v.$navy};
+  --light-navy: #{v.$lightnavy};
+
   --white: #{v.$white};
   --black: #{v.$black};
   --gray: #{v.$gray};
   --red: #{v.$red};
+  //装飾系カラー
+  --yellow: #{v.$yellow};
+  --light-yellow: #{v.$lightyellow};
+  --navy-bg: #{v.$main-bg-color};
+
   --font-md: 1.2857rem; // 18px
   --font-lg: 1.4286rem; // 20px,
-
-  font-family: v.$font-main;
-  font-size: 14px;
-  font-weight: 900;
-  line-height: 1.5;
-  color: var(--black);
-
   /**
   @include v.media("sp") {
     font-size: 10px;
@@ -28,24 +27,31 @@
   } **/
 }
 
+body {
+  font-family: v.$font-main;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.5;
+  color: var(--black);
+}
 main {
   position: relative;
   padding-bottom: 9rem;
-
   &::before {
+    content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    content: "";
     background-image: repeating-linear-gradient(
         to bottom,
-        var(--lightgreen) 0,
-        var(--lightgreen) 1px,
-        transparent 0,
-        transparent 10px
+        var(--navy-bg) 0,
+        var(--navy-bg) 1px,
+        transparent 1px,
+        transparent 1rem
       ),
-      repeating-linear-gradient(to right, var(--lightgreen) 0, var(--lightgreen) 1px, transparent 0, transparent 10px);
+      repeating-linear-gradient(to right, var(--navy-bg) 0, var(--navy-bg) 1px, transparent 1px, transparent 1rem);
+    background-size: 1rem 1rem;
   }
 }
 
@@ -58,7 +64,7 @@ main {
     width: 100%;
     padding: 1rem 0;
   }
-
+  // サイドバーありのレイアウト
   &.main-layout {
     display: grid;
     grid-template-columns: 65% 30%;
@@ -73,7 +79,6 @@ main {
     }
   }
 }
-
 .radius {
   @extend %radius;
 }
@@ -89,15 +94,6 @@ main {
 
   &-sub-title {
     font-size: var(--font-md);
-  }
-
-  &::after {
-    display: block;
-    width: 100%;
-    height: 5px;
-    margin-top: 1rem;
-    content: "";
-    background-color: var(--black);
   }
 }
 

@@ -42,8 +42,12 @@ const header = jQuery(".header");
 const body = jQuery("body");
 
 hum.on("click", function () {
-  header.toggleClass("open");
-  body.toggleClass("no-scroll");
+  const isOpen = header.hasClass("open");
+
+  header.toggleClass("open", !isOpen);
+  header.attr("data-state", isOpen ? "closed" : "open");
+  hum.attr("aria-expanded", String(!isOpen));
+  body.toggleClass("no-scroll", !isOpen);
 });
 
 // SP版でナビリンククリック時にメニューを閉じる

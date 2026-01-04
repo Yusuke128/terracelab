@@ -5,12 +5,12 @@
   grid-template-rows: 1fr;
   gap: 1rem;
   align-items: center;
-  color: var(--black); //カードがaタグだった場合の処理
+  color: inherit; //カードがaタグだった場合の処理
   max-width: 550px;
   @at-root a#{&} {
     &:visited,
     &:active {
-      color: var(--black); //カードがaタグだった場合の処理
+      color: inherit; //カードがaタグだった場合の処理
     }
   }
   &-list {
