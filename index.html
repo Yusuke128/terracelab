@@ -21,7 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -39,7 +40,7 @@
           <!-- .title-box-sub-title end-->
         </div>
         <!-- .title_box end-->
-        <nav class="nav-sp sp">
+        <nav class="nav-sp">
           <ul class="header-nav header-nav-sp" role="list">
             <li class="header-nav-list">
               <a href="" class="link bg-navy">
@@ -123,11 +124,6 @@
             <!-- .link kv-link end-->
           </article>
           <!-- .kv-textarea end-->
-          <div class="seal-block">
-            <img src="img/seal/cizer.png" alt="ハサミ" class="seal seal-kv-1" />
-            <img src="img/seal/cherry.png" alt="さくら" class="seal seal-kv-2" />
-          </div>
-          <!-- .seal-block end-->
         </div>
         <!-- .container end-->
       </section>
@@ -140,30 +136,31 @@
           <div class="swiper-wrapper">
             <p
               class="pickup-swiper-slide swiper-slide bd bd-navy radius"
-              style="height: 407px; display: grid; place-items: center">
+              style="height: 407px; display: grid; place-items: center"
+            >
               条件で抽出した商品の表示にしましょうか？
               <br />
               それとも固定のコンテンツを表示しましましょうか？
             </p>
             <a href="" class="link pickup-swiper-slide swiper-slide bd bd-navy radius">
               slide1
-              <img src="img/front-page/image_sample.png" alt="" class="pickup-img" />
+              <img src="img/image_sample.png" alt="" class="pickup-img" />
             </a>
             <a href="" class="link pickup-swiper-slide swiper-slide bd bd-navy radius">
               slide2
-              <img src="img/front-page/image_sample.png" alt="" class="pickup-img" />
+              <img src="img/image_sample.png" alt="" class="pickup-img" />
             </a>
             <a href="" class="link pickup-swiper-slide swiper-slide bd bd-navy radius">
               slide3
-              <img src="img/front-page/image_sample.png" alt="" class="pickup-img" />
+              <img src="img/image_sample.png" alt="" class="pickup-img" />
             </a>
             <a href="" class="link pickup-swiper-slide swiper-slide bd bd-navy radius">
               slide4
-              <img src="img/front-page/image_sample.png" alt="" class="pickup-img" />
+              <img src="img/image_sample.png" alt="" class="pickup-img" />
             </a>
             <a href="" class="link pickup-swiper-slide swiper-slide bd bd-navy radius">
               slide5
-              <img src="img/front-page/image_sample.png" alt="" class="pickup-img" />
+              <img src="img/image_sample.png" alt="" class="pickup-img" />
             </a>
           </div>
           <!-- .swiper-wrapper end-->
@@ -221,7 +218,7 @@
             <!-- .card problem-card end-->
             <li class="card problem-card bd bd-w5 radius">
               <div class="card-imgbox problem-card-imgbox">
-                <img src="img/front-page/problem-test.png" alt="" class="card-img problem-card-img" />
+                <img src="img/front-page/teach.png" alt="" class="card-img problem-card-img" />
               </div>
               <!-- .card-imgbox end-->
               <!-- <h3 class="card-title"></h3> -->
@@ -234,7 +231,7 @@
             <!-- .card problem-card end-->
             <li class="card problem-card bd bd-w5 radius">
               <div class="card-imgbox problem-card-imgbox">
-                <img src="img/front-page/problem-teach.png" alt="" class="card-img problem-card-img" />
+                <img src="img/front-page/note.png" alt="" class="card-img problem-card-img" />
               </div>
               <!-- .card-imgbox end-->
               <!-- <h3 class="card-title"></h3> -->
@@ -250,31 +247,59 @@
         </div>
         <!-- .container end-->
       </section>
-      <!-- .problems end-->
+      <!-- .problem end-->
 
-      <!-- 202521229追加要素 -->
       <!-- テラスラボでできること -->
-      <section class="features section-padding section-margin bg-white">
-        <div class="container">
+      <section class="feature section-padding section-margin bg-white">
+        <div class="container has-seal">
           <div class="title-box">
             <h2 class="title-box-main">テラスラボでできること</h2>
             <!-- .title-box-main end-->
           </div>
           <!-- .title-box end-->
-          <ol class="feature-list">
-            <li class="feature-list-item list-item">一般的な教室の模試よりも安く、結果も早く確認できる</li>
-            <!-- .feature-list-item list-item end-->
-            <li class="feature-list-item list-item">AI分析で、今の実力を客観的に見える化</li>
-            <!-- .feature-list-item list-item end-->
-            <li class="feature-list-item list-item">成長と課題を納得できる形でフィードバック</li>
-            <!-- .feature-list-item list-item end-->
-            <li class="feature-list-item list-item">体験者の視点を加え、わかりやすく説明</li>
-            <!-- .feature-list-item list-item end-->
-            <li class="feature-list-item list-item">AIと体験者の知見をもとに次のステップを提案</li>
-            <!-- .feature-list-item list-item end-->
-          </ol>
-          <!-- .feature-list end-->
+          <div class="main-layout">
+            <ol class="feature-list" role="list">
+              <li class="feature-list-item list-item bd bd-navy bd-w5 bd-bottom">
+                <h3 class="feature-list-title">安価&and;即日結果確認可能な模試</h3>
+                <!-- .feature-list-title end-->
+                <p class="feature-list-content">一般的なお教室の模試より安く、結果も早く確認できる。</p>
+                <!-- .bd bd-navy bd-w5 bd-bottom end-->
+              </li>
+              <!-- .feature-list-item list-item end-->
+              <li class="feature-list-item list-item list-item bd bd-navy bd-w5 bd-bottom">
+                <h3 class="feature-list-title">得意のAI分析</h3>
+                <!-- .feature-list-title end-->
+                <p class="feature-list-content">AI分析で、今の実力を客観的に見える化</p>
+                <!-- .bd bd-navy bd-w5 bd-bottom end-->
+              </li>
+              <!-- .feature-list-item list-item end-->
+              <li class="feature-list-item list-item list-item bd bd-navy bd-w5 bd-bottom">
+                <h3 class="feature-list-title">的確なフィードバック</h3>
+                <!-- .feature-list-title end-->
+                <p class="feature-list-content">
+                  成長と課題を、納得できる形でフィードバック。体験者の視点を加え、わかりやすく説明。
+                </p>
+                <!-- .bd bd-navy bd-w5 bd-bottom end-->
+              </li>
+              <!-- .feature-list-item list-item end-->
+              <li class="feature-list-item list-item list-item bd bd-navy bd-w5 bd-bottom">
+                <h3 class="feature-list-title">やるべきこと提案</h3>
+                <!-- .feature-list-title end-->
+                <p class="feature-list-content">AIと体験者の知見をもとに、次にやるべきことを提案</p>
+                <!-- .bd bd-navy bd-w5 bd-bottom end-->
+              </li>
+              <!-- .feature-list-item list-item end-->
+            </ol>
+            <!-- .feature-list end-->
+            <div class="feature-imgbox"><img src="img/image_sample.png" alt="" class="feture-img" /></div>
+            <!-- .feature-imgbox end-->
+          </div>
+          <!-- .main-layout end-->
         </div>
+        <div class="seal-block">
+          <img src="img/image_sample.png" alt="さくら" class="seal seal-features-1" />
+        </div>
+        <!-- .seal-block end-->
         <!-- .container end-->
       </section>
       <!-- .features end-->
@@ -328,7 +353,7 @@
       </section>
       <!-- .howto container end-->
 
-      <!-- 教材紹介 product-list使い回し? -->
+      <!-- 教材紹介 -->
       <section class="prep section-padding section-margin bg-white bd bd-navy bd-dashed bd-noside">
         <div class="container">
           <div class="title-box">
@@ -337,15 +362,15 @@
           <!-- .title-box end-->
           <ul class="prep-list card-list" role="list">
             <li class="card prep-card" data-card="first-action">
-              <div class="card-content bd bd-yellow bg-lightyellow radius">
+              <!-- .first-action end-->
+              <div class="card-content prep-card-content bd bd-yellow bg-lightyellow radius section-padding">
                 <p class="first-action">まずはここから!!</p>
-                <!-- .first-action end-->
                 <h3 class="prep-title">実力テスト</h3>
                 <!-- .prep-title end-->
                 <p class="prep-text">テキストテキストテキストテキストテキスト</p>
                 <!-- .prep-text end-->
                 <div class="card-imgbox prep-imgbox">
-                  <img src="img/front-page/image_sample.png" alt="" class="prep-img" />
+                  <img src="img/front-page/test.png" alt="" class="prep-img" />
                 </div>
                 <!-- .prep-imgbox end-->
               </div>
@@ -353,31 +378,32 @@
               <a href="" class="link btn btn-yellow bg-lightyellow">詳細を見る</a>
               <!-- .link btn btn-yellow bg-lightyellow end-->
             </li>
-            <!-- .card prep-card end-->
+            <!-- .card prep-card  end-->
             <li class="card prep-card">
-              <div class="card-content bd bd-lightnavy radius">
+              <div class="card-content prep-card-content bd bd-lightnavy bd-w5 radius section-padding">
                 <h3 class="prep-title">模試</h3>
                 <!-- .prep-title end-->
                 <p class="prep-text">テキストテキストテキストテキストテキスト</p>
                 <!-- .prep-text end-->
                 <div class="card-imgbox prep-imgbox">
-                  <img src="img/front-page/image_sample.png" alt="" class="prep-img" />
+                  <img src="img/front-page/note.png" alt="" class="prep-img" />
                 </div>
                 <!-- .prep-imgbox end-->
               </div>
               <!-- .bd bd-navy end-->
+
               <a href="" class="link btn btn-lightnavy">詳細を見る</a>
               <!-- .link btn btn-navy end-->
             </li>
-            <!-- .card prep-card end-->
+            <!-- .card prep-card  end-->
             <li class="card prep-card">
-              <div class="card-content bd bd-lightnavy radius">
+              <div class="card-content prep-card-content bd bd-lightnavy bd-w5 radius section-padding">
                 <h3 class="prep-title">単元別教材</h3>
                 <!-- .prep-title end-->
                 <p class="prep-text">テキストテキストテキストテキストテキスト</p>
                 <!-- .prep-text end-->
                 <div class="card-imgbox prep-imgbox">
-                  <img src="img/front-page/image_sample.png" alt="" class="prep-img" />
+                  <img src="img/front-page/prep.png" alt="" class="prep-img" />
                 </div>
                 <!-- .prep-imgbox end-->
               </div>
@@ -385,39 +411,46 @@
               <a href="" class="link btn btn-lightnavy">詳細を見る</a>
               <!-- .link btn btn-navy end-->
             </li>
-            <!-- .card prep-card end-->
+            <!-- .card prep-card  end-->
           </ul>
           <!-- .prep-list card-list end-->
         </div>
         <!-- .container end-->
       </section>
       <!-- .prep end-->
-      <!-- 202521229追加要素 -->
+
       <!-- 運営・監修者 -->
-      <article class="adminvoice container">
-        <div class="adminvoice-left"><img src="" alt="" class="adminvoice-img" /></div>
-        <!-- .adminvoice-left end-->
-        <div class="adminvoice-right">
-          <div class="title-box">
-            <h2 class="title-box-main">監修者メッセージ</h2>
-            <!-- .title-box-main end-->
-          </div>
-          <!-- .title-box end-->
-          <div class="adminvoice-messege">
-            <p>テキストが入ります</p>
-            <p>テキストが入ります</p>
-            <p>テキストが入ります</p>
-          </div>
-          <!-- .adminvoice-messege end-->
-          <div class="adminvoice-post">
-            <p class="adminvoice-postname">〇〇株式会社&nbsp;代表取締役</p>
-            <!-- .adminvoice-postname end-->
-            <p class="adminvoice-name">山田&nbsp;太郎</p>
-            <!-- .adminvoice-name end-->
-          </div>
-          <!-- .adminvoice-post end-->
+      <article class="adminvoice container bg-white bd bd-navy bd-w5 radius section-padding has-seal">
+        <div class="title-box">
+          <h2 class="title-box-main">運営・監修者</h2>
+          <!-- .title-box-main end-->
         </div>
-        <!-- .adminvoice-right end-->
+        <div class="main-layout-reverse">
+          <div class="adminvoice-left bd bd-navy">
+            <img src="" alt="" class="adminvoice-img" />
+          </div>
+          <!-- .adminvoice-left end-->
+          <div class="adminvoice-right">
+            <!-- .title-box end-->
+            <div class="adminvoice-messege">
+              <p>テキストが入ります</p>
+              <p>テキストが入ります</p>
+              <p>テキストが入ります</p>
+            </div>
+            <!-- .adminvoice-messege end-->
+            <div class="adminvoice-post">
+              <p class="adminvoice-postname">〇〇株式会社&nbsp;代表取締役</p>
+              <!-- .adminvoice-postname end-->
+              <p class="adminvoice-name">山田&nbsp;太郎</p>
+              <!-- .adminvoice-name end-->
+            </div>
+            <!-- .adminvoice-post end-->
+          </div>
+          <!-- .adminvoice-right end-->
+        </div>
+
+        <!-- .main-leyout-reverse end-->
+        <!-- .container bg-white end-->
       </article>
       <!-- .adminvoice conteiner end-->
     </main>

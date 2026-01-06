@@ -1,49 +1,65 @@
 // ================================================
 // Base 全体に影響するもの
 // ================================================
-@use "variables" as v;
+@use 'variables' as v;
 
 // カラー変数の定義 -
 :root {
-  //基本カラー
+  // 基本カラー
   --navy: #{v.$navy};
   --light-navy: #{v.$lightnavy};
-
   --white: #{v.$white};
   --black: #{v.$black};
   --gray: #{v.$gray};
   --red: #{v.$red};
-  //装飾系カラー
+
+  // 装飾系カラー
   --yellow: #{v.$yellow};
   --light-yellow: #{v.$lightyellow};
   --navy-bg: #{v.$main-bg-color};
+  --font-md: 1.2857rem; // 18px
+  --font-lg: 1.4285rem; // 20px,
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
 
-  --font-md: 18px; // 18px
-  --font-lg: 20px; // 20px,
   /**
   @include v.media("sp") {
     font-size: 10px;
     line-height: 1;
   } **/
 }
+
 html {
   font-size: 14px;
+
+  @include v.media(tab) {
+    font-size: 12px;
+  }
+
+  @include v.media(sp) {
+    font-size: 10px;
+  }
 }
+
 body {
   font-family: v.$font-main;
-  font-weight: 900; //太め
+  font-weight: var(--font-weight-regular);
   line-height: 1.5;
   color: var(--black);
 }
+
 main {
   position: relative;
   padding-bottom: 9rem;
+
   &::before {
-    content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
     pointer-events: none;
+    content: '';
     background-image: repeating-linear-gradient(
         to bottom,
         var(--navy-bg) 0,
@@ -65,21 +81,28 @@ main {
     width: 98%;
     padding: 1rem 0;
   }
-  // サイドバーありのレイアウト
-  &.main-layout {
-    display: grid;
-    grid-template-columns: 65% 30%;
-    gap: 5%;
-    padding-right: 5rem;
-    padding-left: 5rem;
+}
 
-    @include v.media(mobile) {
-      grid-template-columns: 100%;
-      gap: 5rem;
-      padding: 1rem;
-    }
+.main-layout {
+  display: grid;
+  grid-template-columns: 65% 30%;
+  gap: 5%;
+  padding-right: 5rem;
+  padding-left: 5rem;
+
+  @include v.media(mobile) {
+    grid-template-columns: 100%;
+    gap: 5rem;
+    padding: 1rem;
+  }
+
+  &-reverse {
+    display: grid;
+    grid-template-columns: 30% 65%;
+    gap: 5%;
   }
 }
+
 .radius {
   @extend %radius;
 }
@@ -113,6 +136,7 @@ ul {
     display: block;
   }
 }
+
 .material-symbols-outlined {
-  font-family: "Material Symbols Rounded";
+  font-family: 'Material Symbols Rounded';
 }

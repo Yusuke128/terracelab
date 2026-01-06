@@ -1,4 +1,5 @@
-@use "../variables" as v;
+@use '../variables' as v;
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -6,40 +7,45 @@
   padding: 1rem 2rem;
   font-size: var(--font-lg);
   line-height: 1;
-  @extend %radius;
   border: 2px solid transparent;
+
+  @extend %radius;
 
   &.link {
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   }
+
   &-navy {
-    background-color: var(--navy);
     color: var(--white);
+    background-color: var(--navy);
+
     &.link:hover {
-      border-color: var(--navy);
-      background-color: var(--white);
       color: var(--navy);
+      background-color: var(--white);
+      border-color: var(--navy);
     }
   }
 
   &-lightnavy {
-    background-color: var(--light-navy);
     color: var(--black);
+    background-color: var(--light-navy);
+
     &.link:hover {
-      border-color: var(--light-navy);
       color: var(--light-navy);
       background-color: var(--white);
+      border-color: var(--light-navy);
     }
   }
 
   &-yellow {
-    background-color: var(--yellow);
     color: var(--black);
+    background-color: var(--yellow);
+
     &.link:hover {
-      border-color: var(--yellow);
+      color: currentcolor;
       background-color: var(--white);
-      color: currentColor;
+      border-color: var(--yellow);
     }
   }
 }

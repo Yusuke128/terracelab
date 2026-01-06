@@ -1,37 +1,47 @@
 /** ==============================
 ** フロントページ
 **================================ */
-@use "../variables" as v;
+@use '../variables' as v;
 
 .kv {
   background-color: var(--white);
+
   @include v.media(mobile) {
     width: 100%;
     height: auto;
   }
+
   &-imgbox {
     width: 100%;
   }
+
   &-img {
     height: 100%; // サンプル用
     margin: 0 auto; // サンプル用
   }
+
   > .container {
-    @include v.flex;
     gap: 3rem;
+
+    @include v.flex;
   }
+
   &-textarea {
     max-width: 35%;
     text-align: center;
   }
+
   &-content {
     margin-bottom: 1.5rem;
   }
+
   &-title {
     margin-bottom: 1rem;
   }
+
   &-link {
     max-width: 45%;
+    font-weight: var(--font-weight-black);
   }
 }
 
@@ -55,21 +65,70 @@
 
 .problem {
   &-list {
-    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
-    max-width: 80%;
-    margin: 0 auto !important;
+    max-width: 90%;
+    margin-inline: auto;
   }
+
   &-card {
+    grid-template-rows: auto;
+    place-content: center;
+    aspect-ratio: 1;
     padding: 2rem;
+
     &-imgbox {
       aspect-ratio: auto;
     }
+
     &-img {
       max-width: 100%;
       height: auto;
     }
   }
+
   .card-content {
-    font-weight: 500;
+    font-size: var(--font-md);
+    font-weight: var(--font-weight-medium);
+  }
+}
+
+.feature {
+  &-list {
+    display: grid;
+    gap: 3rem;
+
+    &-item {
+      padding-bottom: 1rem;
+    }
+
+    &-title {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.prep {
+  &-list {
+    max-width: 90%;
+    margin-inline: auto;
+  }
+
+  &-card {
+    &-content {
+      text-align: center;
+    }
+
+    &:first-child {
+      grid-column: span 2;
+      max-width: 100%;
+    }
+
+    .first-action {
+      position: absolute;
+    }
+  }
+
+  &-imgbox {
+    display: block;
+    aspect-ratio: auto;
   }
 }

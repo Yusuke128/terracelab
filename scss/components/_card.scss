@@ -1,18 +1,13 @@
-@use "../variables";
+@use '../variables';
 
 .card {
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 1rem;
   align-items: center;
-  color: inherit; //カードがaタグだった場合の処理
   max-width: 550px;
-  @at-root a#{&} {
-    &:visited,
-    &:active {
-      color: inherit; //カードがaタグだった場合の処理
-    }
-  }
+  color: inherit; // カードがaタグだった場合の処理
+
   &-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -23,8 +18,9 @@
 
   &-content {
     display: grid;
+    grid-template-rows: auto 1fr;
     gap: 0.5rem;
-    align-self: start;
+    place-content: center;
   }
 
   &-imgbox {
@@ -32,14 +28,14 @@
     place-items: center;
     aspect-ratio: 1;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
     object-fit: contain;
   }
+
   &-img {
     width: auto;
     height: 100%;
   }
+
   &-sublist {
     @extend %list-disc;
   }
@@ -51,8 +47,16 @@
     &:active {
       color: var(--black);
     }
+
     &:hover .card-img {
       transform: scale(1.2);
+    }
+  }
+
+  @at-root a#{&} {
+    &:visited,
+    &:active {
+      color: inherit; // カードがaタグだった場合の処理
     }
   }
 }
