@@ -46,11 +46,17 @@
 }
 
 // コンテンツ毎のボタン設定
-.swiper-button {
-  z-index: 9;
-  width: 100%;
-  pointer-events: none;
+.swiper {
+  &-button {
+    z-index: 9;
+    width: 100%;
+    pointer-events: none;
 
-  @extend %absolute-center;
-  @include v.flex;
+    @extend %absolute-center;
+    @include v.flex;
+  }
+
+  &-navigation-icon {
+    display: none;
+  }
 }
