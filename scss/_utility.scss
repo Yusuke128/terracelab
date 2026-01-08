@@ -1,0 +1,76 @@
+@use 'variables' as v;
+
+// ハンバーガーオープン時のスクロール制御
+.no-scroll {
+  overflow: hidden;
+}
+
+.bg {
+  &-navy {
+    background-color: var(--navy);
+  }
+
+  &-yellow {
+    background-color: var(--yellow);
+  }
+
+  &-lightyellow {
+    background-color: var(--light-yellow);
+  }
+
+  &-white {
+    background-color: var(--white);
+  }
+
+  &-gray {
+    background-color: var(--gray);
+  }
+}
+
+.bd {
+  @extend %border;
+
+  &-yellow {
+    border-color: var(--yellow);
+  }
+
+  &-lightnavy {
+    border-color: var(--light-navy);
+  }
+
+  &-black {
+    border-color: var(--black);
+  }
+
+  &-w5 {
+    border-width: 5px;
+  }
+
+  &-bottom {
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+  }
+
+  &-noside {
+    border-style: inherit;
+    border-right-width: inherit;
+    border-left-width: inherit;
+  }
+
+  &-dashed {
+    border-style: dashed;
+  }
+}
+
+.section-padding {
+  padding: 3rem 2rem;
+
+  @include v.media(mobile) {
+    padding: 1rem;
+  }
+}
+
+.section-margin {
+  margin: 10rem auto;
+}

@@ -1,0 +1,28 @@
+@use '../variables' as v;
+
+.link {
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+
+  .disabled & {
+    pointer-events: none;
+    cursor: not-allowed;
+    background-color: var(--gray);
+
+    &::before {
+      position: absolute;
+      top: -1.5rem;
+      left: 1rem;
+      content: 'Coming Soon...';
+    }
+  }
+
+  &:visited {
+    color: inherit;
+  }
+
+  .social-link & {
+    @include v.flex(center, center);
+  }
+}

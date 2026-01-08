@@ -1,0 +1,60 @@
+// ==================================================================
+// footer
+// ==================================================================
+@use '../variables' as v;
+
+footer {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.footer {
+  &-nav-list {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav {
+    &-title {
+      width: 80%;
+      line-height: 1.5;
+    }
+
+    &-container {
+      display: flex;
+      grid-column: 3;
+      gap: 3rem;
+      justify-content: space-evenly;
+    }
+  }
+
+  nav {
+    display: grid;
+    gap: 1rem;
+    place-content: start;
+
+    &[data-role='footer-nav'] {
+      grid-column: 3;
+    }
+
+    &[data-role='sns'] {
+      grid-column: 1;
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .copyright {
+    display: block;
+    width: 35%;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 2px solid var(--black);
+  }
+}
