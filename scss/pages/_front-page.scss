@@ -67,6 +67,10 @@
   &-list {
     max-width: 90%;
     margin-inline: auto;
+
+    @include v.media(sp) {
+      max-width: none;
+    }
   }
 
   &-card {
@@ -74,6 +78,10 @@
 
     &-imgbox {
       aspect-ratio: 16 / 9;
+
+      @include v.media(mobile) {
+        aspect-ratio: 0;
+      }
     }
 
     &-img {
@@ -92,6 +100,7 @@
   &-list {
     display: grid;
     gap: 3rem;
+    width: stretch;
 
     &-item {
       padding-bottom: 1rem;
@@ -100,6 +109,10 @@
     &-title {
       margin-bottom: 0.5rem;
     }
+  }
+
+  .main-layout {
+    place-items: center;
   }
 }
 
@@ -116,7 +129,11 @@
     gap: 2rem;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    max-width: 50%;
+
+    @include v.media(sp) {
+      max-width: none;
+    }
 
     &::after {
       position: absolute;
@@ -127,13 +144,28 @@
       content: '';
       border: dashed 2px var(--navy);
       transform-origin: top;
+
+      @include v.media(mobile) {
+        top: 100%;
+        left: 22%;
+        height: 3rem;
+        transform: none;
+      }
     }
 
     &:first-child {
       align-self: flex-start;
 
+      @include v.media(mobile) {
+        align-self: center;
+      }
+
       &::after {
         transform: rotate(-50deg) translateX(100%);
+
+        @include v.media(mobile) {
+          transform: none;
+        }
       }
     }
 
@@ -142,11 +174,19 @@
 
       &::after {
         transform: rotate(-50deg) translateX(50%);
+
+        @include v.media(mobile) {
+          transform: none;
+        }
       }
     }
 
     &:last-child {
       align-self: flex-end;
+
+      @include v.media(mobile) {
+        align-self: center;
+      }
 
       &::after {
         display: none;
@@ -156,15 +196,31 @@
 
   &-imgbox {
     position: relative;
-    max-width: 250px;
+    place-items: center;
+    width: 250px;
     aspect-ratio: 1;
+    padding: 3rem;
     overflow: hidden;
     border-radius: 100%;
+
+    @include v.media(sp) {
+      width: 45%;
+    }
+  }
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   &-content {
     display: grid;
     gap: 2rem;
+
+    @include v.media(sp) {
+      width: 50%;
+    }
   }
 
   &-text {
@@ -198,7 +254,16 @@
     }
   }
 
+  &-title {
+    grid-row: 2;
+  }
+
+  &-text {
+    grid-row: 3;
+  }
+
   &-imgbox {
+    grid-row: 5;
     aspect-ratio: auto;
   }
 }
@@ -211,6 +276,11 @@
   .main-layout-reverse {
     width: 80%;
     margin: 0 auto;
+
+    @include v.media(mobile) {
+      grid-template-rows: auto 1fr;
+      grid-template-columns: 1fr;
+    }
   }
 
   &-left {

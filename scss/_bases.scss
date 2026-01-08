@@ -90,7 +90,7 @@ main {
   padding-right: 5rem;
   padding-left: 5rem;
 
-  @include v.media(mobile) {
+  @include v.media(sp) {
     grid-template-columns: 100%;
     gap: 5rem;
     padding: 1rem;
